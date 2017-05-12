@@ -1,0 +1,55 @@
+.site-footer
+  background-color: desaturate(darken(map-get($colors, violet), 30%), 45%)
+  padding: $space*2 0
+
+  .wrapper
+    +wrapper
+
+  .links
+    +list($style: 'unstyled', $layout: 'horizontal')
+    text-align: center
+    margin-bottom: 0
+
+    > li
+      margin-right: $space
+      color: white
+      display: block
+      margin:
+        top: $space/2
+        bottom: $space/2
+
+      +gt($tablet)
+        display: inline-block
+        margin:
+          top: 0
+          bottom: 0
+
+      &.twitter 
+        .icon, .username
+          color: map-get($colors, blue)
+
+          svg, a
+            color: map-get($colors, blue)
+            fill: map-get($colors, blue)
+
+      a
+        color: white
+
+      .rss-subscribe a
+        color: map-get($colors, orange)
+
+      .icon, .username
+        display: inline-block
+        vertical-align: middle
+        height: 25px
+
+        svg
+          width: 25px
+          height: 25px
+          fill: white
+
+      .username
+        line-height: 1.8rem
+
+.disqus-wrapper
+  +wrapper

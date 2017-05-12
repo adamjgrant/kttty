@@ -1,0 +1,30 @@
+# Site settings
+title: "kttty"
+# email: ajkochanowicz@gmail.com
+description: Web comics in full color and free HBO.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://kttty.com" # the base hostname & protocol for your site
+static_dir: "http://cdn.everything.io/kttty"
+# twitter_username: everythingdotio
+feed_url: "http://feeds.feedburner.com/Kttty"
+paginate: 9
+
+# Build settings
+markdown: kramdown
+
+gems:
+  - "autoprefixer-rails"
+  - "jekyll-assets"
+
+sass:
+  load_paths:
+    - "_sass"
+    - "kickstart"
+    - "kickstart/lib-core/sass"
+assets:
+  sources:
+    - "_assets/javascripts"
+    - "_assets/stylesheets"
+    - "_sass"
+    - "kickstart"
+    - "kickstart/lib-core/sass"

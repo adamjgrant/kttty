@@ -1,0 +1,6 @@
+[submodule "kickstart"]
+	path = kickstart
+	url = https://github.com/ajkochanowicz/kickstart.git
+[submodule "_sass/materialui"]
+	path = _sass/materialui
+	url = git://github.com/ajkochanowicz/materialui.git
