@@ -4,3 +4,6 @@
 [submodule "_sass/materialui"]
 	path = _sass/materialui
 	url = git://github.com/ajkochanowicz/materialui.git
+[submodule "kickstart/lib-docs/sass/vendor/switch"]
+  path = kickstart/lib-docs/sass/vendor/switch
+  url = git://github.com/adamjgrant/switch.git
