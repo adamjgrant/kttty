@@ -1,0 +1,34 @@
+header.main
+  padding:
+    top: $space
+    bottom: $space
+  height: auto
+  background-color: desaturate(darken(map-get($colors, violet), 10%), 15%)
+
+  +gt($tablet)
+    padding:
+      top: $space*2
+      bottom: $space*2
+
+  img.logo
+    width: 75px
+
+    +gt($tablet)
+      margin-bottom: -17px // Ignore the tail
+
+  .wrapper
+    +wrapper
+    position: relative
+
+    p.description
+      +p(true)
+      color: white
+      font-family: $comic-font
+      margin-bottom: 0
+
+      +gt($tablet)
+        position: absolute
+        right: 25px
+        line-height: 20px
+        margin-top: -10px
+        top: 50%

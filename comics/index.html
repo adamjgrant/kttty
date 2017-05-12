@@ -1,0 +1,27 @@
+---
+layout: default
+title: Comics
+permalink: /comics/
+---
+
+<section class="blog-index page">
+
+  <header>
+    <h1>Comics</h1>
+  </header>
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <h2>{{ post.date | date: "%b %-d, %Y" }}</h2>
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <h3>{{ post.title }}</h3>
+          {{ post.excerpt }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h4>Subscribe <a href="{{ site.feed_url }}">via RSS</a></h4>
+
+</section>

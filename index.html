@@ -1,0 +1,24 @@
+---
+layout: v2/default
+---
+
+<div class="home">
+
+  <ul class="post-list">
+    <main class="content">
+      <div class="previews">
+        {% for post in paginator.posts %}
+          <li>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+              <div class="preview">
+                {{ post.content }}
+              </div>
+            </a>
+            <p class="date">{{ post.date | date: "%b %-d, %Y" }}</p>
+          </li>
+        {% endfor %}
+      </div>
+    </main>
+    {% include page_paginator.html %}
+  </ul>
+</div>

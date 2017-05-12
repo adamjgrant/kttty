@@ -1,0 +1,177 @@
+.frames
+  +row
+
+  margin:
+    // top: $space
+    bottom: $space
+
+  +gt($tablet)
+    margin:
+      top: $space*2
+      bottom: $space*2
+
+.frame
+  +column('third')
+  height: 300px
+  border: 3px solid map-get($black, lightest)
+  position: relative
+  margin-bottom: $space/2
+
+  &:last-child
+    &:after
+      content: 'kttty.com'
+      display: block
+      position: absolute
+      bottom: $space
+      right: $space
+      font-size: 0.85rem
+      line-height: normal
+      font-family: $comic-font
+      opacity: 0.7
+
+    &.caption-bottom
+      &:after
+        bottom: $space * 2
+
+    &.frame-iphone
+      &:after
+        right: $space * 3
+
+    &.frame-violet
+      &:after
+        color: white
+
+  &.frame-pulp, &[class^="frame-pulp"]
+    background-image: url('http://cdn.everything.io/kttty/textures/pulp.svg')
+    background-size: 15px
+
+  &.frame-pulp-red
+    background-image: url('http://cdn.everything.io/kttty/textures/pulp-red.svg')
+
+  &.frame-pulp-orange
+    background-image: url('http://cdn.everything.io/kttty/textures/pulp-orange.svg')
+
+  &.frame-pulp-yellow
+    background-image: url('http://cdn.everything.io/kttty/textures/pulp-yellow.svg')
+
+  &.frame-pulp-green
+    background-image: url('http://cdn.everything.io/kttty/textures/pulp-green.svg')
+
+  &.frame-pulp-blue
+    background-image: url('http://cdn.everything.io/kttty/textures/pulp-blue.svg')
+
+  &.frame-pulp-violet
+    background-image: url('http://cdn.everything.io/kttty/textures/pulp-violet.svg')
+
+  &.frame-red
+    background: map-get($colors, red)
+
+  &.frame-orange
+    background: map-get($colors, orange)
+
+  &.frame-yellow
+    background: map-get($colors, yellow)
+
+  &.frame-green
+    background: map-get($colors, green)
+
+  &.frame-blue
+    background: map-get($colors, blue)
+
+  &.frame-violet
+    background: map-get($colors, violet)
+
+  &.frame-inverted
+    background: map-get($black, lightest)
+
+    .bubble
+      background: map-get($black, lightest)
+      color: white
+      border-color: white
+
+      &:after
+        content: url('/img/curl-inverted.svg')
+
+      &.bubble-center
+        &:after
+          content: url('/img/curl-center-inverted.svg')
+
+  &.frame-iphone
+    border-color: transparent
+
+    .iphone
+      border: 3px solid $default-font-color
+      width: 200px
+      height: 300px
+      margin: 0px auto
+
+    .bubble
+      position: static
+      background-image: linear-gradient(#1AD6FD, #1D62F0)
+      color: white
+      font-family: helvetica neue, helvetica, sans-serif
+      border-color: transparent
+      background-size: cover
+      text-transform: none
+      background-repeat: no-repeat
+      margin-bottom: 5px
+
+      &:after
+        display: none
+
+      &.bubble-right
+        background-image: linear-gradient(#87FC70, #0BD318)
+        margin:
+          left: auto
+          right: $space/2
+
+  &.frame-stripe
+    background-image: url('http://cdn.everything.io/kttty/textures/stripe-black.svg')
+    background-size: 5px
+
+    &.frame-stripe-coarse
+      background-size: 10px
+
+    &.frame-stripe-fine
+      background-size: 2px
+
+    &.frame-stripe-red
+      background-image: url('http://cdn.everything.io/kttty/textures/stripe-red.svg')
+
+    &.frame-stripe-orange
+      background-image: url('http://cdn.everything.io/kttty/textures/stripe-orange.svg')
+
+    &.frame-stripe-yellow
+      background-image: url('http://cdn.everything.io/kttty/textures/stripe-yellow.svg')
+
+    &.frame-stripe-green
+      background-image: url('http://cdn.everything.io/kttty/textures/stripe-green.svg')
+
+    &.frame-stripe-blue
+      background-image: url('http://cdn.everything.io/kttty/textures/stripe-blue.svg')
+
+    &.frame-stripe-violet
+      background-image: url('http://cdn.everything.io/kttty/textures/stripe-violet.svg')
+
+
+  aside
+    position: absolute
+    max-height: 60px
+    font-family: $comic-font
+    padding: 4px
+    left: 0
+    right: 0
+    background: map-get($colors, yellow)
+    line-height: 1.3rem
+
+  &.caption-top
+    aside
+      top: 0
+      bottom: auto
+      border-bottom: 3px solid map-get($black, lightest)
+
+  &.caption-bottom
+    aside
+      bottom: 0
+      top: auto
+      border-top: 3px solid map-get($black, lightest)
